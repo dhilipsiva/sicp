@@ -7,4 +7,4 @@
 (test 0 (p))
 
 ; In normal order, this is an endless recursive funtion
-; In Applicative order, this just returns (p)
+; In Applicative order, this just returns 0 - Thanks for correcting me @darshanime
