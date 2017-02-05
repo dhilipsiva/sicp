@@ -1,6 +1,6 @@
 (load "math.scm")
 
-(define accuracy 0.001)
+(define threshold 0.001)
 
 (define guess 1)
 
@@ -17,7 +17,7 @@
   (average guess (/ num guess)))
 
 (define (is-good-enough num guess)
-  (> accuracy (absolute-difference num (square guess))))
+  (> threshold (absolute-difference num (square guess))))
 
 (define (newton-iter num guess)
   (if (is-good-enough num guess)
@@ -27,4 +27,4 @@
 (define (square-root num)
   (newton-iter num guess))
 
-(square-root 4)
+(square-root 40)
